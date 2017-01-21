@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>半透明边框</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-color: #000;
+		}
+		.box{
+			height: 200px;
+			width: 200px;
+			border:10px solid hsla(0,0%,100%,.5);
+			background: white;
+			background-clip: padding-box; /*北京渲染的方式content-box border-box  */
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	
+</div>
+</body>
+</html>

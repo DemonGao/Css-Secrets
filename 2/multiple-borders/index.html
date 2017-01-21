@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>多重边框</title>
+	<style type="text/css">
+		div{
+			height: 200px;
+			width:200px;
+			margin: 0 auto;
+		}
+		.box1{
+			background: yellowgreen;
+			box-shadow: 0 0 0 10px #655,
+						0 0 0 15px deeppink,
+						0 2px 5px 15px rgba(0,0,0,.6);
+		}
+		.box2{
+			background: yellowgreen;
+			border:10px solid #655;
+			outline:5px solid deeppink;
+		}
+	</style>
+</head>
+<body>
+	<h1>box-shadow 方案</h1>
+	<div class="box1"></div>
+	<h1>outline 方案</h1><span>outline 的好处 可以通过outline-offset 设置元素边缘之间的间距</span>
+	<div class="box2"></div>
+</body>
+</html>

@@ -19,10 +19,21 @@
 			box-sizing: border-box;
 			width: 100px;
 			height: 100px;
-			padding: 10px;
+			padding: 10px 20px;
 			background: url('../../img/jewelry.png')
 						no-repeat bottom right yellowgreen;
 			background-origin: content-box;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			/*background: url('../../img/jewelry.png') no-repeat yellowgreen;
+			background-position: right 20px bottom 10px;*/
+
+			/*回退方案*/
+			background: url('../../img/jewelry.png')
+						no-repeat  yellowgreen;
+			background-position: calc(100% - 20px) calc(100% - 10px);
 		}
 	</style>
 </head>
@@ -33,6 +44,10 @@
 	</div>
 	<h1>background-origin方案(最好方案)</h1>
 	<div class="box1">
+		
+	</div>
+	<h1>calc方案</h1>
+	<div class="box2">
 		
 	</div>
 </body>

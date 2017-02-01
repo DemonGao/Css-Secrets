@@ -5,17 +5,33 @@
     <title>自适应的椭圆</title>
     <style rel="stylesheet" type="text/css">
         div{
-            height:150px;
+            height:100px;
             width: 200px;
             background-color: greenyellow;
+            margin-bottom:20px;
         }
         .box{
-            -webkit-border-radius: 100px / 75px;
-            -moz-border-radius: 100px / 75px;
-            border-radius: 100px / 75px;
+            border-radius: 50%;
         }
         .box1{
              border-radius: 50% / 100% 100% 0 0;
+        }
+        .box1-1{
+            /*border-radius:100% 0 0 100%/ 50% 0 0 100%;*/
+            border-radius:100% 0 0 100% /50%;
+        }
+        .box1-2{
+
+            border-radius:0 100% 100% 0 /50%;
+        }
+        .box1-3{
+            border-radius:50% /  0 0 100% 100%;
+        }
+        .box2{
+            border-radius: 100%  0 0 0;
+        }
+        .box3{
+            border-radius:50%/ 0 100%;
         }
     </style>
 </head>
@@ -26,5 +42,12 @@
 <div class="box1">
     自适应半椭圆
 </div>
+<div class="box1-1">
+    自适应半椭圆
+</div>
+<div class="box1-2">自适应半椭圆</div>
+<div class="box1-3">自适应半椭圆</div>
+<div class="box2">四分之一椭圆</div>
+<div class="box3"></div>
 </body>
 </html>

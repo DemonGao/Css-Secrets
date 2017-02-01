@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梯形标签页</title>
+    <style rel="stylesheet" type="text/css">
+        nav >a{
+            position: relative;
+            display: inline-block;
+            padding:15px 20px 7.5px;
+            color: white;
+            margin-left:-15px;
+            text-decoration: none;
+        }
+        nav >a::before{
+            content: '';
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:-1;
+            background: #5588aa;
+            background-image:linear-gradient(
+                            hsla(0,0%,100%,.6),
+                            hsla(0,0%,100%,0));
+            border: 1px solid rgba(0,0,0,.4);
+            border-bottom:none;
+            border-radius: .5em .5em 0 0;
+            box-shadow: 0 .15em white inset;
+            transform:perspective(.5em) rotateX(3deg);
+            transform-origin:bottom right;
+        }
+        nav >a.active{
+            z-index:10000;
+            color: #000000;
+        }
+        nav >a.active::before{
+            background: #fff;
+
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a  href="#">demongao</a>
+    <a class="active" href="#">demongao</a>
+    <a href="#">demongao</a>
+</nav>
+</body>
+</html>

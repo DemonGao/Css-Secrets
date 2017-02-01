@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切角效果</title>
+    <style rel="stylesheet" type="text/css">
+        .box{
+            height:100px;
+            width:200px;
+            /*background: #58a;*/
+            background:
+                    linear-gradient(-45deg,transparent 15px,#58a 0) right,
+                    linear-gradient(45deg,transparent 15px,#655 0) left;
+            background-size:50% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .box1{
+            margin-top:50px;
+            height:100px;
+            width:200px;
+            background: #58a;
+            clip-path:polygon(15px 0,0 15px,0 calc(100% - 15px),15px 100%,calc(100% - 15px) 100%,100% calc(100% - 15px),100% 15px,calc(100% - 15px) 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        线性渐变方案
+    </div>
+
+    <div class="box1">
+        裁切路径方案
+    </div>
+</body>
+</html>

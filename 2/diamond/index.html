@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菱形</title>
+    <style rel="stylesheet" type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            margin:40px;
+        }
+        .picture{
+            width:100px;
+            transform:rotate(45deg);
+            overflow: hidden;
+        }
+        .picture img{
+            max-width:100%;
+            transform:rotate(-45deg) scale(1.42);
+        }
+        .picture1{
+
+        }
+        .picture1 img{
+            clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%); /*根据点坐标裁切*/
+            transition:1s clip-path;
+        }
+        .picture1 img:hover{
+            clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        }
+    </style>
+</head>
+<body>
+<h3>基于变形的方案</h3>
+<div class="picture">
+    <img src="../../img/logo.jpg" alt="logo">
+</div>
+<h3>裁切路径方案</h3>
+<div class="picture1">
+    <img src="../../img/logo.jpg" alt="logo">
+</div>
+</body>
+</html>

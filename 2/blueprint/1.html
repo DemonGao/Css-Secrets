@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        .box{
+            font-size:0;
+            background-color: greenyellow;
+        }
+        .box1{
+            /*display:inline-block;*/
+            width:100px;
+            float:left;
+            background-color: red;
+            font-size:14px;
+        }
+        .float-center{
+            position: absolute;
+            left:50%;
+            background-color: red;
+            transform: translate(-50%,-50%);
+        }
+        .clearfix::after{
+            content: '.';
+            overflow: hidden;
+            clear: both;
+            zoom: 1;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="box clearfix">
+    <div class="box1">1</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div style="clear: both;"></div>
+</div>
+<!--<h3>如何居中一个浮动元素</h3>-->
+<!--<div class="float-center">-->
+    <!--浮动元素-->
+<!--</div>-->
+<script>
+//    function Foo() {
+//        var i = 0;
+//        return function() {
+//            console.log(i++);
+//        }
+//    }
+//
+//    var f1 = Foo(),
+//            f2 = Foo();
+//    f1();
+//    f1();
+//    f2();
+
+
+//var bb = 1;
+//function aa(bb) {
+//    bb = 2;
+//    alert(bb);
+//};
+//aa(bb);
+//alert(bb);
+//function getUrlParam(sUrl, sKey) {
+//    var result = {};
+//    sUrl = sUrl.split('?')[1];
+//    if(typeof(sUrl) ==="undefined" ){
+//        return {}
+//    }
+//    sUrl = sUrl.split('&');
+//    for(let i=0;i<sUrl.length;i++){
+//        let s = sUrl[i].split('=');
+//        if(typeof(result[s[0]])!="undefined"){
+//            console.log(typeof(result[s[0]]));
+//            if(typeof(result[s[0]])!="object"){
+//                console.log(result[s[0]]);
+//                var arr = [result[s[0]]];
+//                arr.push(s[1])
+//                result[s[0]]=arr;
+//
+//            }else{
+//                result[s[0]].push(s[1])
+//            }
+//        }else{
+//            result[s[0]]=s[1]
+//        }
+//
+//    }
+//    if(typeof(sKey) === "undefined"){
+//        return result;
+//    }else{
+//        return result[sKey];
+//    }
+//}
+//console.log(getUrlParam('http://www.nowcoder.com?key=1&key=2&key=3&test=4#hehe'));
+
+
+const obj ={
+    hello:'world',
+    foo(){
+        const bar = () => this.hello
+
+        return bar;
+    }
+}
+
+//const obj ={
+//    hello:'world',
+//    foo(){
+//        const bar = function(){
+//            return this.hello;
+//        }
+//
+//        return bar;
+//    }
+//}
+
+//const obj ={
+//    hello:'world',
+//    foo(){
+//        var that =this;
+//        const bar = function(){
+//            return that.hello;
+//        }
+//
+//        return bar;
+//    }
+//}
+
+var hello = 'ES6';
+var bar = obj.foo();
+console.log(bar());
+</script>
+</body>
+</html>

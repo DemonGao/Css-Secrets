@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        .box{
+            font-size:0;
+            background-color: greenyellow;
+        }
+        .box1{
+            /*display:inline-block;*/
+            width:100px;
+            float:left;
+            background-color: red;
+            font-size:14px;
+        }
+
+        .clearfix{
+            overflow: hidden;
+            zoom: 1;
+        }
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+        /*.clearfix::after{*/
+            /*content: '.';*/
+            /*overflow: hidden;*/
+            /*clear: both;*/
+            /*zoom: 1;*/
+        /*}*/
+    </style>
+</head>
+<body>
+方法1:
+<div class="box">
+    <div class="box1">1</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div style="clear: both;"></div>
+</div>
+方法2:
+<div class="box" style="overflow: hidden;">
+    <div class="box1">1</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+</div>
+方法3:
+<div class="box clearfix">
+    <div class="box1">1</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+    <div class="box1">2</div>
+</div>
+</body>
+</html>

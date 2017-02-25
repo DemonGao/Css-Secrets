@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自适应布局</title>
+    <style type="text/css">
+
+        div{
+            height:300px;
+        }
+        .left{
+            background-color: red;
+
+            float:left;
+            width:200px;
+        }
+        .center{
+            background-color: green;
+        }
+
+
+        .left1,.center1,.right1{
+            float:left;
+        }
+        .center1{
+            background-color: darkseagreen;
+
+            width:100%;
+
+        }
+        .left1{
+            background-color:yellow;
+
+            width:200px;
+            margin-left:-200px;
+        }
+
+        .right1{
+            background-color: darkmagenta;
+
+            width: 100px;
+            margin-left:-100%;
+        }
+        .center1 .centersub{
+            background-color: red;
+            margin-left:100px;
+            margin-right:200px;
+        }
+    </style>
+</head>
+<body>
+<h1>左边固定200px 左边自适应</h1>
+<div class="left"></div>
+<div class="center"></div>
+
+<h1>左边固定200px 中间自适应 右边固定100px</h1>
+<div class="center1">
+    <div class="centersub">
+        center
+    </div>
+</div>
+<div class="left1">left</div>
+<div class="right1">right</div>
+</body>
+</html>
